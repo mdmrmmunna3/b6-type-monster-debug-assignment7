@@ -63,9 +63,8 @@ body {
 }
 #result {
   position: fixed;
- 
-  top: 10%; 
-  left: 10%;
+  top: 0; 
+  left: 0;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -75,6 +74,13 @@ body {
   color: white;
   text-align: center;
   padding: 2rem;
+  
+}
+
+.postion {
+  margin-left: 50%;
+  margin-top: 30%;
+
 }
 #show-time{
   text-align: center;
