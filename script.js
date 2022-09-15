@@ -8,7 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
-let startTime;
+let startTime ;
 let questionText = "";
 
 // Load and display question
@@ -103,24 +103,27 @@ const start = () => {
   // If already started, do not start again
   if (startTime) return;
 
+  
   let count = 3;
   countdownOverlay.style.display = "flex";
-
+  
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
+    console.log(startCountdown)
     // finished timer
-    if (count == 0) {
+    // console.log(--count) ; 
+    if (count === 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
-    count--;
+    count-- ;
   }, 1000);
+  
 };
 
 // START Countdown
